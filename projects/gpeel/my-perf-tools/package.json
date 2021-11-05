@@ -1,11 +1,18 @@
 {
   "name": "@gpeel/my-perf-tools",
-  "version": "0.0.1",
+  "version": "12.0.0",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0"
+    "@angular/core": "^12.2.0",
+    "@gpeel/plog": "^12.0.0"
   },
   "dependencies": {
+    "@gpeel/plog": "^12.0.0",
     "tslib": "^2.3.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "change-detection"
+  ],
+  "license": "MIT"
 }

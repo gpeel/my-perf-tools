@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Plog} from '@gpeel/plog';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <root-refresh-count></root-refresh-count>
+    <div>PERF TEST</div>
+    <app-sub></app-sub>
+    <button (click)="click()">ok</button>
+  `
 })
 export class AppComponent {
-  title = 'gpeel-my-perf-tools-ng12';
+  title = 'my-perf-tools';
+
+  click() {
+    Plog.red('click');
+  }
 }

@@ -2,6 +2,6 @@
  * Public API Surface of my-perf-tools
  */
 
-export * from './lib/my-perf-tools.service';
-export * from './lib/my-perf-tools.component';
-export * from './lib/my-perf-tools.module';
+export {RefreshCountComponent} from './lib/refresh-count.component';
+export {RootRefreshCountComponent} from './lib/root-refresh-count.component';
+export {MyPerfModule} from './lib/my-perf.module';
