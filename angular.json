@@ -98,9 +98,61 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "@gpeel/my-perf-tools": {
+      "projectType": "library",
+      "root": "projects/gpeel/my-perf-tools",
+      "sourceRoot": "projects/gpeel/my-perf-tools/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/gpeel/my-perf-tools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gpeel/my-perf-tools/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gpeel/my-perf-tools/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gpeel/my-perf-tools/src/test.ts",
+            "tsConfig": "projects/gpeel/my-perf-tools/tsconfig.spec.json",
+            "karmaConfig": "projects/gpeel/my-perf-tools/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/gpeel/my-perf-tools/**/*.ts",
+              "projects/gpeel/my-perf-tools/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "gpeel-my-perf-tools-ng12"
+  "defaultProject": "gpeel-my-perf-tools-ng12",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

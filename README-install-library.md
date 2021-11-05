@@ -1,16 +1,47 @@
-# GpeelMyValidatorsNg12
+# Gpeel install library ng12
 
-@gpeel/my-validators@12.0.0 is the first version migrated for Angular 12.
+@gpeel/my-perf-tools@12.0.0 is the first version of perf-tools migrated for Angular 12.
 
-Here is the addtional steps used to install the library into this project.
+Here is the addtional steps I used to install the library into this project.
+
+## eslint settings
+
+In ng12 no more migration from tslint to eslint, the project comes with no linter at all, so you just need to add eslint
+with:
+
+        ng add @angular-eslint/schematics
+
+## eslint rules
+
+https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
+
+## usual eslint plugins
+
+to install because missing by default and used but my rules:
+
+         npm i -D eslint-plugin-jsdoc
+         npm i -D eslint-plugin-import
+         npm i -D eslint-plugin-prefer-arrow
+
+         npm i -D eslint-plugin-prefer-arrow eslint-plugin-import eslint-plugin-jsdoc
+
+## Webstorm
+
+- activate Eslint Automatic config + fix on save option
+- and disable tslint !
+- Go to Tools -> Actions On Save and check - reformat Code, Optimize Imports, Rearrange Code Run code cleanup and run
+  eslint --fix
+
+## bump
+
+    npm install -g bump-cli@1.1.3
 
 # multi CLI Projects
 
 https://angular.io/guide/file-structure
 https://angular.io/guide/creating-libraries
 
-            ng generate library @gpeel/my-validators
-            ng build @gpeel/my-validators
+            ng generate library @gpeel/my-perf-tools
 
 https://angular.io/guide/creating-libraries#managing-assets-in-a-library
 Managing assets in a library Starting with version 9.x of the ng-packagr tool, you can configure the tool to
@@ -31,9 +62,9 @@ tsconfig paths to tell the build system where to find the library.
  {
   "compilerOptions": {
     "paths": {
-      "@gpeel/my-validators": [
-        "dist/gpeel/my-validators/gpeel-my-validators",
-        "dist/gpeel/my-validators"
+      "@gpeel/my-perf-tools": [
+        "dist/gpeel/my-perf-tools/gpeel-my-perf-tools",
+        "dist/gpeel/my-perf-tools"
       ]
     }
   }
@@ -48,13 +79,13 @@ If you Don'T want to build, but have you lib as simple sources, now you can chan
 
 ````
     "paths": {
-      "@gpeel/my-validators": [
-        "projects/gpeel/my-validators/src/public-api.ts"
+      "@gpeel/my-perf-tools": [
+        "projects/gpeel/my-perf-tools/src/public-api.ts"
       ]
     },
 ````
 
-##            
+##              
 
 In the lib .eslintrc.json the generated path is wrong, change it from :
 line 2
@@ -80,8 +111,8 @@ And also later tsconfig paths are wrong. FORM
       ],
       "parserOptions": {
         "project": [
-          "projects/gpeel/my-validators/tsconfig.lib.json",
-          "projects/gpeel/my-validators/tsconfig.spec.json"
+          "projects/gpeel/my-perf-tools/tsconfig.lib.json",
+          "projects/gpeel/my-perf-tools/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

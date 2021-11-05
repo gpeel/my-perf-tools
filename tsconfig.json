@@ -2,6 +2,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@gpeel/my-perf-tools": [
+        "projects/gpeel/my-perf-tools/src/public-api.ts",
+        "dist/gpeel/my-perf-tools/gpeel-my-perf-tools",
+        "dist/gpeel/my-perf-tools"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
