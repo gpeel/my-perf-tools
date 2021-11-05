@@ -36,6 +36,8 @@ to install because missing by default and used but my rules:
 
     npm install -g bump-cli@1.1.3
 
+    npm i  cpx@1.5.0
+
 # multi CLI Projects
 
 https://angular.io/guide/file-structure
@@ -85,7 +87,7 @@ If you Don'T want to build, but have you lib as simple sources, now you can chan
     },
 ````
 
-##              
+##               
 
 In the lib .eslintrc.json the generated path is wrong, change it from :
 line 2

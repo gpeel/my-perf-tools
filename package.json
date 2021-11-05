@@ -5,7 +5,7 @@
     "bump_1_patch": "bump projects/gpeel/my-perf-tools/package.json",
     "bump_1_major": "bump --major projects/gpeel/my-perf-tools/package.json",
     "bump_1_minor": "bump --minor projects/gpeel/my-perf-tools/package.json",
-    "build-lib_2": "ng build @gpeel/my-perf-tools --prod",
+    "build-lib_2": "ng build @gpeel/my-perf-tools",
     "cpSources_3": "cpx -v \"./projects/gpeel/my-perf-tools/src/**/*.*\"   ./dist/gpeel/my-perf-tools/src",
     "publish_4": "cd ./dist/gpeel/my-perf-tools && npm publish --access public ",
     "ng": "ng",
@@ -26,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@gpeel/plog": "^12.1.0",
+    "cpx": "^1.5.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
