@@ -2,7 +2,7 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
-For Angular 12.x.y => use @gpeel/my-perf-tools 12.0.0 or more recent
+For Angular 12.x.y or more => use @gpeel/my-perf-tools 12.0.0 or more recent
 
 For Angular 11.x.y => use @gpeel/my-perf-tools@11.2.0 (last version for angular 11)
 
