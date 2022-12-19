@@ -1,19 +1,15 @@
 import {Component} from '@angular/core';
-import {Plog} from '@gpeel/plog';
+
+// noinspection JSVoidFunctionReturnValueUsed
 
 @Component({
   selector: 'app-root',
   template: `
     <root-refresh-count></root-refresh-count>
-    <div>PERF TEST</div>
-    <app-sub></app-sub>
-    <button (click)="click()">ok</button>
+    <div>App Component works!</div>
+    <app-child></app-child>
   `
 })
 export class AppComponent {
-  title = 'my-perf-tools';
-
-  click() {
-    Plog.red('click');
-  }
 }
+

@@ -18,7 +18,7 @@ export class RootRefreshCountComponent implements DoCheck {
     Plog.createComponent('RootRefreshCountComponent');
   }
 
-  ngDoCheck(): void { // Called at the beginning of every change detection run
+  ngDoCheck(): void { // Called at the beginning of every change detection cycle
     Plog.perfCD(`CD ${this.counter++}`);
   }
 
