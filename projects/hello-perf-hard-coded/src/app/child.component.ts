@@ -14,6 +14,7 @@ export class ChildComponent {
 
   onDomRefreshComponent() {
     console.log('**** component CHILD', this.counterDom++);
+    // return this.counterDom; // to test infamous ExpressionChangedAfterItHasBeenCheckedError:
   }
 }
 
